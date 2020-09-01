@@ -3,14 +3,16 @@ description: A brief and gentle introduction to computer science.
 template:
   repo: computer-science-history-template
   name: computer-science-history
+  description: Learning resources and assignments.
 before:
   - type: createIssue
     title: Welcome!
     body: new-issue.md
 steps:
-  - title: First step
-    description: The first step in your course
-    event: issues.assigned
+  - title: 'Video: Early Computing'
+    description: 'Early Computing: Crash Course Computer Science'
+    event: issues.closed
     link: '{{ repoUrl }}'
     actions:
       - type: closeIssue
+    video: 'https://www.youtube.com/embed/O5nskjZ_GoI'
