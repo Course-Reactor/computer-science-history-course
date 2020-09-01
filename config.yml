@@ -61,3 +61,13 @@ steps:
     description: Selected readings about Ada Lovelace and her legacy.
     link: '{{ store.ada_lovelace_link }}'
     event: issues.closed
+    actions:
+      - type: createIssue
+        title: 'Grace Hopper: Pioneer of Programming Languages'
+        body: grace-hopper.md
+        store:
+          grace_hopper_link: '{{ result.data.html_url }}'
+  - title: 'Grace Hopper: Pioneer of Programming Languages'
+    description: Selected readings about Grace Hopper and her legacy.
+    link: '{{ store.grace_hopper_link }}'
+    event: issues.closed
