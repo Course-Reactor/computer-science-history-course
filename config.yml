@@ -71,3 +71,13 @@ steps:
     description: Selected readings about Grace Hopper and her legacy.
     link: '{{ store.grace_hopper_link }}'
     event: issues.closed
+    actions:
+      - type: createIssue
+        title: 'Tim Berners-Lee: Inventor of the World Wide Web'
+        body: tim-berners-lee.md
+        store:
+          tim_berners_lee_link: '{{ result.data.html_url }}'
+  - title: 'Tim Berners-Lee: Inventor of the World Wide Web'
+    description: Selected readings about Tim Berners-Lee
+    link: '{{ store.tim_burners_lee_link }}'
+    event: issues.closed
