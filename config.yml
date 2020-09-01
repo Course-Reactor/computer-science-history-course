@@ -21,8 +21,33 @@ steps:
       - type: createIssue
         body: electronic-computing.md
         title: 'Video: Electronic Computing'
+        store:
+          electronic_computing_url: '{{ result.data.html_url }}'
     video: 'https://www.youtube.com/embed/O5nskjZ_GoI'
   - title: 'Video: Electronic Computing'
     description: 'Electronic Computing: Crash Course Computer Science'
     video: 'https://www.youtube.com/embed/LN0ucKNX0hc'
+    event: issues.closed
+    link: '{{ store.electronic_computing_link }}'
+    actions:
+      - type: createIssue
+        title: 'Video: How Computers Work'
+        body: how-computers-work.md
+        store:
+          how_computers_work_url: '{{ result.data.html_url }}'
+  - title: 'Video: How Computers Work'
+    description: 'How Computers Work: Hardware and Software'
+    link: '{{ store.how_computers_work_url }}'
+    video: 'https://www.youtube.com/embed/xnyFYiK2rSY'
+    event: issues.closed
+    actions:
+      - type: createIssue
+        title: 'Video: CPU, Memory, I/O'
+        body: cpu_memory_i_o.md
+        store:
+          cpu_memory_i_o_link: '{{ result.data.html_url }}'
+  - title: 'Video: CPU, Memory, I/O'
+    description: 'How Computers Work: CPU, Memory, Input & Output'
+    link: '{{ store.cpu_memory_i_o_link }}'
+    video: 'https://www.youtube.com/embed/DKGZlaPlVLY'
     event: issues.closed
