@@ -43,7 +43,7 @@ steps:
     actions:
       - type: createIssue
         title: 'Video: CPU, Memory, I/O'
-        body: cpu_memory_i_o.md
+        body: cpu-memory-i-o.md
         store:
           cpu_memory_i_o_link: '{{ result.data.html_url }}'
   - title: 'Video: CPU, Memory, I/O'
