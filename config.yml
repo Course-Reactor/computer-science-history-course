@@ -8,12 +8,21 @@ before:
   - type: createIssue
     title: 'Video: Early Computing'
     body: early-computing.md
+    store:
+      early_computing_url: '{{ result.data.html_url }}'
 steps:
   - title: 'Video: Early Computing'
     description: 'Early Computing: Crash Course Computer Science'
     event: issues.closed
-    link: '{{ repoUrl }}'
+    link: '{{ store.early_computing_url }}'
     actions:
       - type: closeIssue
         issue: 'Video: Early Computing'
+      - type: createIssue
+        body: electronic-computing.md
+        title: 'Video: Electronic Computing'
     video: 'https://www.youtube.com/embed/O5nskjZ_GoI'
+  - title: 'Video: Electronic Computing'
+    description: 'Electronic Computing: Crash Course Computer Science'
+    video: 'https://www.youtube.com/embed/LN0ucKNX0hc'
+    event: issues.closed
