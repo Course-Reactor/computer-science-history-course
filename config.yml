@@ -6,8 +6,8 @@ template:
   description: Learning resources and assignments.
 before:
   - type: createIssue
-    title: Welcome!
-    body: new-issue.md
+    title: 'Video: Early Computing'
+    body: early-computing.md
 steps:
   - title: 'Video: Early Computing'
     description: 'Early Computing: Crash Course Computer Science'
@@ -15,4 +15,5 @@ steps:
     link: '{{ repoUrl }}'
     actions:
       - type: closeIssue
+        issue: 'Video: Early Computing'
     video: 'https://www.youtube.com/embed/O5nskjZ_GoI'
