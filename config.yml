@@ -28,7 +28,7 @@ steps:
     description: 'Electronic Computing: Crash Course Computer Science'
     video: 'https://www.youtube.com/embed/LN0ucKNX0hc'
     event: issues.closed
-    link: '{{ store.electronic_computing_link }}'
+    link: '{{ store.electronic_computing_url }}'
     actions:
       - type: createIssue
         title: 'Video: How Computers Work'
