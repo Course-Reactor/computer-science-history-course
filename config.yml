@@ -51,3 +51,13 @@ steps:
     link: '{{ store.cpu_memory_i_o_link }}'
     video: 'https://www.youtube.com/embed/DKGZlaPlVLY'
     event: issues.closed
+    actions:
+      - type: createIssue
+        title: 'Ada Lovelace: The World''s First Computer Programmer'
+        body: ada-lovelace.md
+        store:
+          ada_lovelace_link: '{{ result.data.html_url }}'
+  - title: 'Ada Lovelace: The World''s First Computer Programmer'
+    description: Selected readings about Ada Lovelace and her legacy.
+    link: '{{ store.ada_lovelace_link }}'
+    event: issues.closed
